@@ -1,0 +1,67 @@
+/* =================================
+   scss/base/_base.scss   
+   
+   Base Element Styles
+==================================== */
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Limit Overall overall page width */
+html {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: $color-browser-background;
+  position: relative; /* Fix for absolute positioning */
+}
+
+body {
+  @include text($txt-ht-body, 1.5, 400, $color-text-base);
+  margin: 0;
+  font-family: $stack-lato;
+  padding-top: 25px;
+  background: $light-grey;
+}
+
+h1 {
+  @include text($txt-ht-h1, $weight: 900);
+}  
+
+h2 {
+  @include text($txt-ht-h2, $weight: 700);
+  @extend %txt-centered;
+  margin: 0;
+  padding-top: 3.125em;
+}
+
+h3 {
+  @include text($txt-ht-h3, $weight: 400);
+  margin: 0;
+}
+
+h4 {
+  @include text($txt-ht-h4, $weight: 700);
+  @extend %txt-centered;
+  margin: 0;
+  padding-top: 3.125em;
+}
+
+h5 {
+  font-size: $txt-ht-h5; //0.75em in project02
+  text-transform: uppercase;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: $color-text-dark;
+  text-decoration: none;
+}
+

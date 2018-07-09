@@ -1,0 +1,88 @@
+/* =================================
+   scss/layout/_header.scss   
+   
+   Header Element Styles
+==================================== */
+
+
+
+/* ---- Navigation Header ---- */
+
+.main-header {
+  padding-bottom: .5em;
+
+  @include tablet {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include desktop {
+    width: 80%;
+    max-width: 1150px;
+    flex-direction: row; /*- set everything back to a horizontal - */
+    justify-content: space-between;
+    /*
+       BECAUSE "main-header" and "main-nav" are two seperate "DIVs" / IE:containers
+       justify-content: space-between -> treats then as 2 seperate containers
+       forcing 1st container: main-header to the left and
+       forcing 2nd container: main-nav to the right
+       while distributing the "space between" the two containers
+    */
+  }
+  
+}
+
+
+
+/* ---- Lance Chandler ---- */
+.name {
+  font-weight: 900;
+  font-size: $txt-ht-h1 + 0.10;
+  margin: 0;
+
+  & a {
+    @extend %txt-centered;
+    display: block;
+    padding: 10px 15px;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+
+
+/* ---- Home Porfolio Skills Contact ---- */
+.main-nav {
+  margin-top: 5px;
+
+  & a {
+    display: block;
+    padding: 10px 15px;
+    font-size: $txt-ht-ahref;
+    @extend %txt-centered;
+    text-transform: uppercase;
+    color: $green;
+    background: $white;
+    margin: 0 0.9375em 0.3125em 0.9375em;
+    /* creates space between main-nav li a's */
+
+    &:hover {
+      color: $color-text-darkest;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+
+    & a {
+      background: transparent;
+    }
+  }
+  
+}
+

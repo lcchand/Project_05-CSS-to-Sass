@@ -1,0 +1,19 @@
+// Media Queries
+
+@mixin mobile {
+  @media (min-width: #{$brkpt-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$brkpt-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$brkpt-desktop}) {
+    @content;
+  }
+}

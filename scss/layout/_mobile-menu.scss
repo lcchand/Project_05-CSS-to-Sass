@@ -1,0 +1,74 @@
+/* =================================
+   scss/layout/_mobile-menu.scss   
+   
+   Mobile Menu Element Styles
+   ==================================== */
+
+.menu {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  transition: all .3s;
+  padding: 0px 5px 0px 5px;
+}
+
+.menu-list {
+  @extend %txt-centered;
+
+  & a {
+    display: block;
+    padding: 10px 0 10px 0;
+    font-size: $txt-ht-ahref;
+    @extend %txt-centered;
+    @extend %nav-href-txt-case;
+    color: $green;
+    background: $white;
+    @extend %nav-href-li-margins;
+
+    &:hover {
+      color: $color-text-darkest;
+    }
+  }
+
+  @include tablet {
+    display: none; /* Turn UL List off > 768 */
+  }
+
+}
+
+
+
+
+/* --- Hamburger Icon --- */
+
+.hamburger-label {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1;
+  display: block;
+  width: 42px;
+  height: 42px;
+  font: 42px/42px FontAwesome;
+  @extend %txt-centered;
+  cursor: pointer;
+
+  @include tablet {
+    display: none; /* Turn Hamburger off > 768 */
+  }
+  
+}
+
+
+.hamburger-checkbox {
+  position: absolute;
+  opacity: 0;
+  @extend %txt-centered;
+}
+
+.hamburger-checkbox:checked ~ .menu {
+  width: auto;
+  height: auto;
+  padding-top: 2em;
+}
+

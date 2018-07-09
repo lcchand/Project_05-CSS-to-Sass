@@ -1,0 +1,52 @@
+/* =================================
+   scss/layout/_banner.scss   
+   
+   Banner Element Styles
+ ==================================== */
+
+
+/* ------ Banner ------- */
+
+.banner {
+  @extend %txt-centered;
+  background: $color-page-background;
+  padding: 2em 0;
+  /*	margin-bottom: 48px; */
+
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+}
+
+
+@include tablet {
+  
+  .photo {
+    margin-right: 1em;
+  }
+
+  .tagline {
+    margin: 0;
+  }
+
+}
+
+
+@include desktop {
+  
+  .photo {
+    margin-right: 3.5em;
+  }
+
+  .tagline {
+    padding-left: 0;
+    padding-right: 6em;
+  }
+
+}

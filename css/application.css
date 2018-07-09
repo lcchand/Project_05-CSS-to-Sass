@@ -1,0 +1,416 @@
+/* Descriptive Color Variables */
+/* Functional Color Variables */
+/* Font Stack Variables */
+/* Font Size Variables */
+/* Media Query Breakpoints */
+/* =================================
+   scss/base/_base.scss   
+   
+   Base Element Styles
+==================================== */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+* {
+  box-sizing: border-box; }
+
+/* Limit Overall overall page width */
+html {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f2f2f2;
+  position: relative;
+  /* Fix for absolute positioning */ }
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #797e83;
+  margin: 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 25px;
+  background: #ebecec; }
+
+h1 {
+  font-size: 1.25em;
+  font-weight: 900; }
+
+h2 {
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 3.125em; }
+
+h3 {
+  font-size: 1.17em;
+  font-weight: 400;
+  margin: 0; }
+
+h4 {
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 3.125em; }
+
+h5 {
+  font-size: 0.75em;
+  text-transform: uppercase; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+a {
+  color: #656a6e;
+  text-decoration: none; }
+
+h2, h4, .menu-list, .menu-list a, .hamburger-label, .hamburger-checkbox, .name a, .main-nav a, .banner, .row, .skills, .contact-info, .main-footer {
+  text-align: center; }
+
+.menu-list a, .main-nav a {
+  text-transform: uppercase; }
+
+.skills, .skill, .contact-info {
+  display: block;
+  margin: 0 auto; }
+
+.menu-list a, .main-nav a, .footer-nav a {
+  margin: 0 0.9375em 0.3125em 0.9375em; }
+
+/* =================================
+   scss/layout/_mobile-menu.scss   
+   
+   Mobile Menu Element Styles
+   ==================================== */
+.menu {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  transition: all .3s;
+  padding: 0px 5px 0px 5px; }
+
+.menu-list a {
+  display: block;
+  padding: 10px 0 10px 0;
+  font-size: 0.95em;
+  color: #3acec2;
+  background: #fff; }
+  .menu-list a:hover {
+    color: #093a58; }
+@media (min-width: 768px) {
+  .menu-list {
+    display: none;
+    /* Turn UL List off > 768 */ } }
+
+/* --- Hamburger Icon --- */
+.hamburger-label {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1;
+  display: block;
+  width: 42px;
+  height: 42px;
+  font: 42px/42px FontAwesome;
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    .hamburger-label {
+      display: none;
+      /* Turn Hamburger off > 768 */ } }
+
+.hamburger-checkbox {
+  position: absolute;
+  opacity: 0; }
+
+.hamburger-checkbox:checked ~ .menu {
+  width: auto;
+  height: auto;
+  padding-top: 2em; }
+
+/* =================================
+   scss/layout/_header.scss   
+   
+   Header Element Styles
+==================================== */
+/* ---- Navigation Header ---- */
+.main-header {
+  padding-bottom: .5em; }
+  @media (min-width: 768px) {
+    .main-header {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+  @media (min-width: 1024px) {
+    .main-header {
+      width: 80%;
+      max-width: 1150px;
+      flex-direction: row;
+      /*- set everything back to a horizontal - */
+      justify-content: space-between; } }
+
+/* ---- Lance Chandler ---- */
+.name {
+  font-weight: 900;
+  font-size: 1.35em; }
+  .name a {
+    display: block;
+    padding: 10px 15px; }
+    .name a:hover {
+      color: #3acec2; }
+
+/* ---- Home Porfolio Skills Contact ---- */
+.main-nav {
+  margin-top: 5px; }
+  .main-nav a {
+    display: none;
+    padding: 10px 15px;
+    font-size: 0.95em;
+    color: #3acec2;
+    background: #fff; }
+    .main-nav a:hover {
+      color: #093a58; }
+  @media (min-width: 768px) {
+    .main-nav {
+      display: flex; }
+      .main-nav a {
+        display: block;
+        background: transparent; } }
+
+/* =================================
+   scss/layout/_banner.scss   
+   
+   Banner Element Styles
+ ==================================== */
+/* ------ Banner ------- */
+.banner {
+  background: #ebecec;
+  padding: 0 0 1em 0; }
+  @media (min-width: 768px) {
+    .banner {
+      display: flex;
+      flex-direction: row-reverse;
+      text-align: left;
+      align-items: flex-start;
+      padding-left: 4em;
+      padding-right: 4em; } }
+
+@media (min-width: 768px) {
+  .photo {
+    margin-right: 1em; }
+
+  .tagline {
+    margin: 0; } }
+@media (min-width: 1024px) {
+  .photo {
+    margin-right: 3.5em; }
+
+  .tagline {
+    padding-left: 0;
+    padding-right: 6em; } }
+/* =================================
+   scss/layout/_row.scss   
+   
+   Row Element Styles
+==================================== */
+/* --- row - Portfolios items --- */
+.row {
+  padding-top: 3.125em;
+  background: #fff; }
+  @media (min-width: 768px) {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 5em;
+      padding-right: 5em; }
+      .row .portfolio {
+        flex: 1 50%;
+        /*-- each column occupies "equal" amount of space --*/ } }
+  @media (min-width: 1024px) {
+    .row {
+      flex-direction: row;
+      width: 90%;
+      padding: 0;
+      margin: 0 auto;
+      padding-top: 3.125em; }
+      .row .portfolio {
+        flex: 1 33%;
+        /*-- each column occupies "equal" amount of space --*/ }
+      .row .pf-desc {
+        width: 85%; } }
+
+/* =================================
+   scss/layout/_skills.scss   
+   
+   Skills Element Styles
+==================================== */
+/* ---- Skills ---- */
+.skills {
+  width: 100%;
+  padding-bottom: 55px;
+  background: #3acec2;
+  font-weight: 300; }
+  @media (min-width: 768px) {
+    .skills {
+      display: flex;
+      flex-direction: column;
+      /* -- centers Skills "vertically in a column"  --*/
+      align-items: center;
+      /* -- centers li items "horizontally in a row" --*/
+      padding-bottom: 75px; } }
+  @media (min-width: 1024px) {
+    .skills {
+      width: 90%; } }
+
+/* ---- Skill LIs & Bullets ---- */
+.skill {
+  width: 40%;
+  margin-top: 1em;
+  color: #fff;
+  letter-spacing: 0.1em;
+  line-height: 3; }
+  .skill-XH {
+    font-size: 4em;
+    line-height: 0.5; }
+  @media (min-width: 768px) {
+    .skill {
+      display: flex;
+      width: 60%; }
+      .skill li {
+        flex: 1 1 0;
+        flex-direction: row;
+        align-items: center;
+        /* -- centers li items "horizontally in a row" --*/
+        justify-content: space-between; }
+      .skill-XH {
+        line-height: 0.625; } }
+  @media (min-width: 1024px) {
+    .skill {
+      width: 60%; } }
+
+/* =================================
+   scss/layout/_contact.scss   
+   
+   Contact Element Styles
+==================================== */
+/* ---- Contact ---- */
+.contact-info {
+  width: 90%;
+  padding-bottom: 55px;
+  color: #979fa7;
+  font-weight: 300; }
+  .contact-info h4 {
+    color: #797e83; }
+  .contact-info a {
+    color: #979fa7; }
+  @media (min-width: 768px) {
+    .contact-info {
+      width: 55%; } }
+  @media (min-width: 1024px) {
+    .contact-info {
+      width: 40%; } }
+
+/* =================================
+   scss/layout/_footer.scss   
+   
+   Footer Element Styles
+==================================== */
+/* ---- Navigation Footer ---- */
+.main-footer {
+  border-top: 2px solid #969696;
+  padding: 2em 0; }
+  @media (min-width: 320px) {
+    .main-footer {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; } }
+
+/* ----- Back to Top  ----- */
+.footer-top {
+  margin: 0; }
+  @media (min-width: 768px) {
+    .footer-top {
+      display: none;
+      /* turn "back to top" off for 768 > */ } }
+
+/* ---- Lance Chandler ---- */
+.footer-name {
+  text-align: left;
+  font-weight: 700;
+  font-size: 1em;
+  margin: 0; }
+
+/* ---- Home Porfolio Skills Contact ---- */
+.footer-nav {
+  margin-top: 5px; }
+  .footer-nav a {
+    font-size: 0.95em;
+    text-align: right;
+    text-transform: uppercase;
+    color: #3acec2;
+    display: block;
+    padding: 10px 0 10px 10px; }
+    .footer-nav a:hover {
+      color: #093a58; }
+  @media (min-width: 320px) {
+    .footer-nav {
+      display: none;
+      /* turn li items off below 768 */ } }
+  @media (min-width: 768px) {
+    .footer-nav {
+      display: flex;
+      /* turn li items on 768 > */ } }
+
+/* =================================
+   scss/components/_typography.scss   
+   
+   Typography Element Styles
+==================================== */
+.sect-head {
+  display: block;
+  background: #fff; }
+  @media (min-width: 1024px) {
+    .sect-head {
+      width: 90%;
+      margin: 0 auto; } }
+
+.pf-desc {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: .9375em;
+  padding-bottom: 3.125em;
+  color: #979fa7;
+  font-weight: 300; }
+
+.tagline {
+  flex: 1 1 0;
+  padding: 0 2em 0 2em;
+  font-size: 16px;
+  font-weight: 300; }
+
+.headline {
+  margin-bottom: 0; }
+
+/* =================================
+   scss/components/_images.scss   
+   
+   Image Element Styles
+==================================== */
+/* --- images --- */
+.photo {
+  width: 165px;
+  height: 165px;
+  flex: 0 1 0;
+  border-radius: 50%;
+  border: 3px solid #fff; }
+
+.pf-image {
+  width: 290px;
+  padding-bottom: 1.875em; }
+
+/*# sourceMappingURL=application.css.map */

@@ -1,0 +1,16 @@
+/* =================================
+   scss/layout/_containers.scss   
+   
+   Containers Element Styles
+==================================== */
+
+
+/* ------ Containers ------- */
+
+
+.row {
+  @extend %txt-centered;
+  padding-top: 3.125em;
+  background: $white; 
+}
+

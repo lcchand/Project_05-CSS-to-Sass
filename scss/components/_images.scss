@@ -1,0 +1,20 @@
+/* =================================
+   scss/components/_images.scss   
+   
+   Image Element Styles
+==================================== */
+
+/* --- images --- */
+
+.photo {
+  width: 165px;
+  height: 165px;
+  flex: 0 1 0;
+  border-radius: 50%;
+  border: 3px solid $white; //#fff
+}
+
+.pf-image {
+  width: 290px;
+  padding-bottom: 1.875em;
+}

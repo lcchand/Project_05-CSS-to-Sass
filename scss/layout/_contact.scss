@@ -1,0 +1,36 @@
+/* =================================
+   scss/layout/_contact.scss   
+   
+   Contact Element Styles
+==================================== */
+
+
+/* ---- Contact ---- */
+
+
+.contact-info {
+    @extend %block-margin-0-auto;
+    width: 90%;
+    padding-bottom: 55px;
+    color: $color-text-light;
+    font-weight: 300;
+    @extend %txt-centered;
+
+  & h4 {
+    color: $color-text-base;
+  }
+
+  & a {
+    color: $color-text-light;
+  }
+
+  @include tablet {
+    width: 55%;
+  }
+
+  @include desktop {
+    width: 40%;
+  }
+
+}
+

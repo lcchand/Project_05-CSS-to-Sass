@@ -1,0 +1,72 @@
+/* =================================
+   scss/layout/_skills.scss   
+   
+   Skills Element Styles
+==================================== */
+
+
+/* ---- Skills ---- */
+
+.skills {
+
+    @extend %block-margin-0-auto;
+    width: 100%;
+    padding-bottom: 55px;
+    background: $color-green-background; 
+    @extend %txt-centered;
+    font-weight: 300;
+  
+  @include tablet {
+    display: flex;
+    flex-direction: column; /* -- centers Skills "vertically in a column"  --*/
+    align-items: center;    /* -- centers li items "horizontally in a row" --*/
+    padding-bottom: 75px;
+  }
+
+  @include desktop {
+    width: 90%;
+  }
+
+}
+
+/* ---- Skill LIs & Bullets ---- */
+
+.skill {
+
+  @extend %block-margin-0-auto;
+  width: 40%;
+  margin-top: 1em;
+  color: $white;
+  letter-spacing: 0.1em;
+  line-height: 3;
+
+  &-XH {
+    font-size: $txt-ht-bullet-skills;
+    line-height: 0.5;
+  }
+
+  @include tablet {
+    display: flex;
+    width: 60%;
+
+    & li {
+      flex: 1 1 0;
+      flex-direction: row;
+      align-items: center;    /* -- centers li items "horizontally in a row" --*/
+      justify-content: space-between;
+    }
+
+    &-XH {
+      line-height: 0.625;
+    }
+
+  }
+
+  @include desktop {
+    width: 60%;
+  }
+  
+}
+
+
+

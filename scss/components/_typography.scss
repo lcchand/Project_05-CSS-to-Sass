@@ -1,0 +1,40 @@
+/* =================================
+   scss/components/_typography.scss   
+   
+   Typography Element Styles
+==================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+
+
+.sect-head {
+  display: block;
+  background: $color-sect-head;
+
+  @include desktop {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+}
+
+.pf-desc {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: .9375em;
+  padding-bottom: 3.125em;
+  color: $color-text-light;
+  font-weight: 300;
+}
+
+.tagline {
+  flex: 1 1 0;
+  padding: 0 2em 0 2em;
+  font-size: $txt-ht-body; //1em in project02
+  font-weight: 300;
+}
+  
+.headline {
+  margin-bottom: 0;
+}

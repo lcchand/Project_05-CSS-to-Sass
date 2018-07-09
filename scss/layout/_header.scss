@@ -1,0 +1,81 @@
+/* =================================
+   scss/layout/_header.scss   
+   
+   Header Element Styles
+==================================== */
+
+
+
+/* ---- Navigation Header ---- */
+
+.main-header {
+  padding-bottom: .5em;
+
+  @include tablet {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include desktop {
+    width: 80%;
+    max-width: 1150px;
+    flex-direction: row; /*- set everything back to a horizontal - */
+    justify-content: space-between;
+  }
+  
+}
+
+
+
+/* ---- Lance Chandler ---- */
+.name {
+  font-weight: 900;
+  font-size: $txt-ht-name-header;
+//  font-size: $txt-ht-h1 + 0.10;
+
+  & a {
+    @extend %txt-centered;
+    display: block;
+    padding: 10px 15px;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+
+
+/* ---- Home Porfolio Skills Contact ---- */
+.main-nav {
+  margin-top: 5px;
+
+  & a {
+    display: none;
+    padding: 10px 15px;
+    font-size: $txt-ht-ahref;
+    @extend %txt-centered;
+    @extend %nav-href-txt-case;
+    color: $green;
+    background: $white;
+    @extend %nav-href-li-margins;
+
+    &:hover {
+      color: $color-text-darkest;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+
+    & a {
+      display: block;
+      background: transparent;
+    }
+  }
+  
+}
+

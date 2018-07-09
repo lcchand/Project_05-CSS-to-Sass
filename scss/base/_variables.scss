@@ -1,0 +1,54 @@
+
+/* Descriptive Color Variables */
+
+$white               : #fff;    //Section Head background
+$very-light-grey     : #f2f2f2; //Broswer background
+$light-grey          : #ebecec; //Page background
+$light-medium-grey   : #979fa7; //Portfolio Description text
+$grey                : #797e83; //Body Text
+$dark-grey           : #656a6e; //Href Grey
+$darkest-grey        : #093a58; //Footer Href Hover
+$green               : #3acec2; //Navigation text & skills background
+
+
+/* Functional Color Variables */
+
+$color-browser-background    : $very-light-grey;
+$color-page-background       : $light-grey;
+$color-green-background      : $green;
+
+$color-text-light            : $light-medium-grey;
+$color-text-base             : $grey;
+$color-text-dark             : $dark-grey;
+$color-text-darkest          : $darkest-grey;
+
+$color-sect-head             : $white;
+$color-dk-border             : #969696;
+
+
+/* Font Stack Variables */
+
+$stack-sans-serif            : Helvetica, Arial, sans-serif;
+$stack-helvetica             : 'Helvetica Neue', $stack-sans-serif;
+$stack-lato                  : 'Lato', $stack-helvetica;
+
+
+/* Font Size Variables */
+
+$txt-ht-body                 : 16px;
+$txt-ht-ahref                : 0.95em;
+$txt-ht-h1                   : 1.25em;
+$txt-ht-h2                   : 1em;
+$txt-ht-h3                   : 1.17em;
+$txt-ht-h4                   : 1em;
+$txt-ht-h5                   : 0.75em;
+$txt-ht-bullet-skills        : 4em;
+$txt-ht-name-header          : 1.35em;
+$txt-ht-name-footer          : 1em;
+
+
+/* Media Query Breakpoints */
+
+$brkpt-mobile                : 320px;
+$brkpt-tablet                : 768px;
+$brkpt-desktop               : 1024px;

@@ -1,0 +1,71 @@
+/* =================================
+   scss/layout/_footer.scss   
+   
+   Footer Element Styles
+==================================== */
+
+
+/* ---- Navigation Footer ---- */
+
+.main-footer {
+  border-top: 2px solid $color-dk-border;
+  padding: 2em 0;
+  @extend %txt-centered;
+
+  @include mobile {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+}
+
+/* ----- Back to Top  ----- */
+.footer-top {
+  margin: 0;
+
+  @include tablet {
+    display: none; /* turn "back to top" off for 768 > */
+  }
+}
+
+
+/* ---- Lance Chandler ---- */
+.footer-name {
+  text-align: left;
+  font-weight: 700;
+  font-size: $txt-ht-name-footer;
+//  font-size: $txt-ht-h1 - 0.25; //1em in Project02
+  margin: 0;
+}
+
+/* ---- Home Porfolio Skills Contact ---- */
+.footer-nav {
+  margin-top: 5px;
+
+  & a {
+    font-size: $txt-ht-ahref; //.95em in project02
+    text-align: right;
+    text-transform: uppercase;
+    color: $green; 
+    display: block;
+    padding: 10px 0 10px 10px;
+    @extend %nav-href-li-margins;
+
+    &:hover {
+      color: $color-text-darkest;
+    }
+  }
+
+  @include mobile {
+    display: none; /* turn li items off below 768 */
+  }
+
+  @include tablet {
+    display: flex; /* turn li items on 768 > */
+  }
+  
+}
+
